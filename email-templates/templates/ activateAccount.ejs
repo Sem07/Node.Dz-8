@@ -1,0 +1,20 @@
+<% include('../includes/header.ejs') %>
+
+<div class="text-center height300 bg-silver mt-100">
+    <h3>Hello,  <% userEmail %>  </h3>
+    <h4>Welcome <% userName %>></h4>
+    <br>
+    <br>
+
+    <div>
+        <span>
+            Please, activate your account. Visit on this link:
+            <a href=`http://localhost:5000/api/activate`>
+                <span class="red">Press here</span>
+            </a>
+        </span>
+    </div>
+</div>
+
+
+<% include('../includes/footer.ejs') %>

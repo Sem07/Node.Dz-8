@@ -47,7 +47,7 @@ module.exports = {
                         .then(() => photo.mv(path.resolve(process.cwd(), 'public', photoDir, photoName)))
                         .then(() => {
                             const filePath = path.join(photoDir, photoName);
-                            fileService.createFiles({ fileExtension, filePath, userId }, newCar.id);
+                            fileService.createFiles({ type: fileExtension, file: filePath, user_id: userId }, newCar.id);
                         });
                 }
             }
@@ -63,7 +63,7 @@ module.exports = {
                         .then(() => doc.mv(path.resolve(process.cwd(), 'public', photoDir, docName)))
                         .then(() => {
                             const filePath = path.join(photoDir, docName);
-                            fileService.createFiles({ fileExtension, filePath, userId }, newCar.id);
+                            fileService.createFiles({ type: fileExtension, file: filePath, user_id: userId }, newCar.id);
                         });
                 }
             }
@@ -92,7 +92,7 @@ module.exports = {
                         .then(() => photo.mv(path.resolve(process.cwd(), 'public', photoDir, photoName)))
                         .then(() => {
                             const filePath = path.join(photoDir, photoName);
-                            fileService.createFiles({ fileExtension, filePath, userId }, id);
+                            fileService.createFiles({ type: fileExtension, file: filePath, user_id: userId }, id);
                         });
                 }
             }
@@ -108,7 +108,7 @@ module.exports = {
                         .then(() => doc.mv(path.resolve(process.cwd(), 'public', photoDir, docName)))
                         .then(() => {
                             const filePath = path.join(photoDir, docName);
-                            fileService.createFiles({ fileExtension, filePath, userId }, id);
+                            fileService.createFiles({ type: fileExtension, file: filePath, user_id: userId }, id);
                         });
                 }
             }
